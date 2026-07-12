@@ -1,3 +1,7 @@
+output "resource_deployment_script_azure_clis_id" {
+  description = "Map of id values across all resource_deployment_script_azure_clis, keyed the same as var.resource_deployment_script_azure_clis"
+  value       = { for k, v in azurerm_resource_deployment_script_azure_cli.resource_deployment_script_azure_clis : k => v.id }
+}
 output "resource_deployment_script_azure_clis_cleanup_preference" {
   description = "Map of cleanup_preference values across all resource_deployment_script_azure_clis, keyed the same as var.resource_deployment_script_azure_clis"
   value       = { for k, v in azurerm_resource_deployment_script_azure_cli.resource_deployment_script_azure_clis : k => v.cleanup_preference }
